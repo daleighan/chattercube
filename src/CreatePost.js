@@ -4,11 +4,9 @@ import React, { Component } from 'react';
 class CreatePost extends Component {
 	render() {
 		return (
-		<div> testing </div>
-		
+			<div>Test</div>
 		)
 	}
-
 }
 
 export default CreatePost;

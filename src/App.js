@@ -5,6 +5,8 @@ import PostList from './PostList.js';
 import CreatePost from './CreatePost.js';
 import axios from 'axios';
 
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,13 +22,18 @@ class App extends Component {
       part: 'responseJSON',
     })
     .then(data => {
-      this.setState({messages: data.data.messages});    
+      this.setState({messages: data.data.messages});  
     })
+  }
+
+  componentDidMount() {
+    this.setState({username : prompt('Please enter a username')});
+    this.getMessages();
   }
 
 
   render() {
-    this.getMessages();
+    console.log(this.state)
     return (
       <div className="App">
         <div className="App-header">
@@ -35,7 +42,7 @@ class App extends Component {
         </div>
         <div>
           To get started, edit <code>src/App.js</code> and save to reload.
-        <PostList />
+        <PostList messages={this.state.messages} />
         <CreatePost />
         </div>
       </div>

@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
+import Post from './Post.js';
 
 
 class PostList extends Component {
-	render() {
+	constructor(props) {
+    super(props);
+  }
+
+	render(props) {
 		return (
-		<div> testing </div>
+		<div>
+			{this.props.messages.map((message) =>
+				<Post message={message} />
+			)}
+		</div>
 		)
 	}
-
 }
 
 export default PostList;
