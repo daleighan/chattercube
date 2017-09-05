@@ -13,20 +13,17 @@ class App extends Component {
       messages: [],
       username: null
     };
-    this.messages = [];
-  
   }
 
   getMessages() {
     axios.get('http://chattercube.thirdtape.com/messages', {
       part: 'responseJSON',
     })
-    .then(function(data) {
-      console.log(data.data.messages);
-      this.setState({messages: data.data.messages});
-      
+    .then(data => {
+      this.setState({messages: data.data.messages});    
     })
   }
+
 
   render() {
     this.getMessages();
