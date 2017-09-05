@@ -18,7 +18,7 @@ class App extends Component {
     };
   }
 
-  getMessages() {
+  getMessages = () => {
     axios.get('http://chattercube.thirdtape.com/messages', {
       part: 'responseJSON',
     })
@@ -27,7 +27,7 @@ class App extends Component {
     })
   }
 
-  sendMessages() {
+  sendMessages = () => {
     axios.post('http://chattercube.thirdtape.com/messages', {
         message: this.state.currentmessage,
         username: this.state.username
@@ -38,17 +38,17 @@ class App extends Component {
     )
   }
 
-  sendButton() {
-    // this.setState({currentmessage: tosend});
-    console.log('test');
+  sendButton = () => {
+    this.setState({currentmessage: 'eeeeeeeee'});
+    this.sendMessages();
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.setState({username : prompt('Please enter a username')});
     this.getMessages();
   }
 
-  render() {
+  render = () => {
     this.getMessages();
     return (
       <div className="App">
