@@ -13,7 +13,8 @@ class App extends Component {
 
     this.state = {
       messages: [],
-      username: null
+      username: '',
+      currentmessage: ''
     };
   }
 
@@ -28,7 +29,7 @@ class App extends Component {
 
   sendMessages() {
     axios.post('http://chattercube.thirdtape.com/messages', {
-        message: 'Yooooooo',
+        message: this.state.currentmessage,
         username: this.state.username
       }
     )
@@ -37,12 +38,15 @@ class App extends Component {
     )
   }
 
+  sendButton() {
+    // this.setState({currentmessage: tosend});
+    console.log('test');
+  }
+
   componentDidMount() {
     this.setState({username : prompt('Please enter a username')});
     this.getMessages();
-    this.sendMessages();
   }
-
 
   render() {
     this.getMessages();
@@ -55,7 +59,7 @@ class App extends Component {
         <div>
           To get started, edit <code>src/App.js</code> and save to reload.
         <PostList messages={this.state.messages} />
-        <CreatePost />
+        <CreatePost sendButton={this.sendButton} />
         </div>
       </div>
     );
