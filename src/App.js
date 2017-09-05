@@ -26,14 +26,26 @@ class App extends Component {
     })
   }
 
+  sendMessages() {
+    axios.post('http://chattercube.thirdtape.com/messages', {
+        message: 'Yooooooo',
+        username: this.state.username
+      }
+    )
+    .then(response =>
+      console.log(response)
+    )
+  }
+
   componentDidMount() {
     this.setState({username : prompt('Please enter a username')});
     this.getMessages();
+    this.sendMessages();
   }
 
 
   render() {
-    console.log(this.state)
+    this.getMessages();
     return (
       <div className="App">
         <div className="App-header">

@@ -11,7 +11,7 @@ class PostList extends Component {
 		return (
 		<div>
 			{this.props.messages.map((message) =>
-				<Post message={message} />
+				<Post key={message.messageId} message={message} />
 			)}
 		</div>
 		)

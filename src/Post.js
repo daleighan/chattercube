@@ -8,7 +8,9 @@ class Post extends Component {
 
 	render() {
 		return (
-			<div>Each Post</div>
+			<div>
+			  <span>{this.props.message.username}: </span> <span> {this.props.message.message} </span>
+			</div>
 		);
 	}
 }
