@@ -47,6 +47,7 @@ class App extends Component {
       this.sendMessages();
     }, 500)
     bounce();
+    this.getMessages();
   }
 
   componentDidMount = () => {
