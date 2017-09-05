@@ -4,6 +4,8 @@ import './App.css';
 import PostList from './PostList.js';
 import CreatePost from './CreatePost.js';
 import axios from 'axios';
+import $ from 'jquery';
+import _ from 'lodash';
 
 
 
@@ -38,9 +40,13 @@ class App extends Component {
     )
   }
 
-  sendButton = () => {
-    this.setState({currentmessage: 'eeeeeeeee'});
-    this.sendMessages();
+  sendButton = (message) => {
+    this.setState({currentmessage: $('.txt').val()});
+    $('.txt').val('');
+    var bounce = _.debounce(() => {
+      this.sendMessages();
+    }, 500)
+    bounce();
   }
 
   componentDidMount = () => {
