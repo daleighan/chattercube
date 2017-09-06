@@ -11,20 +11,36 @@
   background-color: #989898;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: #1E90FF;
+  font-size: 34px;
+  text-align: left;
+  text-decoration: underline;
+  margin-right: 50px;
+}
+
+h2 {
+  display: inline;
+  padding-right: 40px;
 }
 
 .App-intro {
   font-size: large;
 }
 
+body {
+  background-color: #989898; 
+}
+
 .post {
   max-width: 400px;
-  border: 1px solid black;
-  border-radius: 4px;
+  border: 2px double grey;
+  border-radius: 6px;
   padding: 10px 20px 10px 10px;
-  margin: 5px 0 5px 20px;
+  margin: 5px 0 5px 0;
+  background-color: #D0D0D0;
+  color: #1E90FF;
 }
+
 
 .message-list {
   float: left;
@@ -35,16 +51,52 @@
 
 .create-post {
   text-align: left;
-  padding: 60px 60px 60px 0;
-  width: 33%;
+  padding: 30px 60px 60px 0;
+  width: 28%;
   float: right;
 }
 
+.txt {
+  display: block;
+  height: 100px;
+  width: 260px;
+  border-radius: 8px;
+  border: 0.5px solid grey;
+  font-size: 14px;
+}
+
+.button {
+  margin-top: 30px;
+  margin-left: 33px;
+  border: 2px outset grey;
+  border-radius: 3px;
+  padding: 5px 5px 3px 10px;
+  width: 180px;
+  text-align: center;
+  background-color: #D0D0D0;
+  color: #1E90FF;
+
+}
+
+.button:active {
+  margin-top: 30px;
+  border: 2px inset #D0D0D0;
+  border-radius: 3px;
+  padding: 5px 5px 3px 5px;
+  width: 180px;
+  text-align: center;
+  background-color: grey;
+  color: #1E90FF;
+  text-decoration: underline;
+}
+
 .container {
-  width: 70%;
+  width: 860px;
   position: absolute;
-  top: 40%;
-  left: 10%;
+  top: 160px;
+  left: 20%;
+  background: white;
+  border-radius: 20px;
 }
 
 
@@ -53,3 +105,5 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
