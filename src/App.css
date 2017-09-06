@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #989898;
   height: 150px;
   padding: 20px;
   color: white;
@@ -17,6 +17,37 @@
 .App-intro {
   font-size: large;
 }
+
+.post {
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px 20px 10px 10px;
+  margin: 5px 0 5px 20px;
+}
+
+.message-list {
+  float: left;
+  text-align: left;
+  padding: 40px 0 60px 60px;
+  width: 54%;
+}
+
+.create-post {
+  text-align: left;
+  padding: 60px 60px 60px 0;
+  width: 33%;
+  float: right;
+}
+
+.container {
+  width: 70%;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

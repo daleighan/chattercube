@@ -45,7 +45,7 @@ class App extends Component {
     $('.txt').val('');
     var bounce = _.debounce(() => {
       this.sendMessages();
-    }, 500)
+    }, 250)
     bounce();
     this.getMessages();
   }
@@ -63,10 +63,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to ChatterCube</h2>
         </div>
-        <div>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        <PostList messages={this.state.messages} />
-        <CreatePost sendButton={this.sendButton} />
+        <div className="container">
+        <span className="message-list"> <PostList messages={this.state.messages} /> </span>
+        <span><CreatePost sendButton={this.sendButton} /></span>
         </div>
       </div>
     );
