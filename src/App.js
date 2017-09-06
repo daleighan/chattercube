@@ -35,9 +35,6 @@ class App extends Component {
         username: this.state.username
       }
     )
-    .then(response =>
-      console.log(response)
-    )
   }
 
   sendButton = (message) => {
