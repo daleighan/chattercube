@@ -37,7 +37,8 @@ body {
 }
 
 .post {
-  max-width: 400px;
+  width: 400px;
+  word-wrap: break-word;
   border: 2px double grey;
   border-radius: 6px;
   padding: 10px 20px 10px 10px;
